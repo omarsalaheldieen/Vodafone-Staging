@@ -1,3 +1,6 @@
+
+
+```js
 const TOTAL_SLOTS = 15;
 const scoreboard = document.getElementById("scoreboard");
 
@@ -16,7 +19,7 @@ function createDefaultScoreboard() {
 
 createDefaultScoreboard();
 
-socket.on("connection:2XKO Booth", (data) => {
+socket.on("connection:Vodafone Booth", (data) => {
     let scores = JSON.parse(data);
     console.log("Initial scores:", scores);
 
@@ -42,7 +45,7 @@ socket.on("connection:2XKO Booth", (data) => {
     }
 });
 
-socket.on("scoreUpdate:2XKO Booth", (data) => {
+socket.on("scoreUpdate:Vodafone Booth", (data) => {
     console.log("Score update received:");
     
     let scores = JSON.parse(data);
@@ -71,3 +74,4 @@ socket.on("scoreUpdate:2XKO Booth", (data) => {
         scoreboard.appendChild(div);
     }
 });
+```
