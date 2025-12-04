@@ -1,6 +1,151 @@
+
+
 let queueList = [];
 
-socket.on("2X:Enter", (data) => {
+socket.on("MKA:Enter", (data) => {
+    let parsedData = JSON.parse(data);
+    let newQueueNumber = parsedData.queueNumber;
+
+    queueList.unshift(newQueueNumber);
+
+    if (queueList.length > 15) {
+        queueList.pop();
+    }
+
+    renderQueue();
+});
+
+socket.on("TJ:Enter", (data) => {
+    let parsedData = JSON.parse(data);
+    let newQueueNumber = parsedData.queueNumber;
+
+    queueList.unshift(newQueueNumber);
+
+    if (queueList.length > 15) {
+        queueList.pop();
+    }
+
+    renderQueue();
+});
+
+socket.on("TC3:Enter", (data) => {
+    let parsedData = JSON.parse(data);
+    let newQueueNumber = parsedData.queueNumber;
+
+    queueList.unshift(newQueueNumber);
+
+    if (queueList.length > 15) {
+        queueList.pop();
+    }
+
+    renderQueue();
+});
+
+socket.on("SF:Enter", (data) => {
+    let parsedData = JSON.parse(data);
+    let newQueueNumber = parsedData.queueNumber;
+
+    queueList.unshift(newQueueNumber);
+
+    if (queueList.length > 15) {
+        queueList.pop();
+    }
+
+    renderQueue();
+});
+
+socket.on("SI:Enter", (data) => {
+    let parsedData = JSON.parse(data);
+    let newQueueNumber = parsedData.queueNumber;
+
+    queueList.unshift(newQueueNumber);
+
+    if (queueList.length > 15) {
+        queueList.pop();
+    }
+
+    renderQueue();
+});
+
+socket.on("PM:Enter", (data) => {
+    let parsedData = JSON.parse(data);
+    let newQueueNumber = parsedData.queueNumber;
+
+    queueList.unshift(newQueueNumber);
+
+    if (queueList.length > 15) {
+        queueList.pop();
+    }
+
+    renderQueue();
+});
+
+socket.on("CTR:Enter", (data) => {
+    let parsedData = JSON.parse(data);
+    let newQueueNumber = parsedData.queueNumber;
+
+    queueList.unshift(newQueueNumber);
+
+    if (queueList.length > 15) {
+        queueList.pop();
+    }
+
+    renderQueue();
+});
+
+socket.on("MSX:Enter", (data) => {
+    let parsedData = JSON.parse(data);
+    let newQueueNumber = parsedData.queueNumber;
+
+    queueList.unshift(newQueueNumber);
+
+    if (queueList.length > 15) {
+        queueList.pop();
+    }
+
+    renderQueue();
+});
+
+socket.on("TT:Enter", (data) => {
+    let parsedData = JSON.parse(data);
+    let newQueueNumber = parsedData.queueNumber;
+
+    queueList.unshift(newQueueNumber);
+
+    if (queueList.length > 15) {
+        queueList.pop();
+    }
+
+    renderQueue();
+});
+
+socket.on("T8:Enter", (data) => {
+    let parsedData = JSON.parse(data);
+    let newQueueNumber = parsedData.queueNumber;
+
+    queueList.unshift(newQueueNumber);
+
+    if (queueList.length > 15) {
+        queueList.pop();
+    }
+
+    renderQueue();
+});
+
+socket.on("FC:Enter", (data) => {
+    let parsedData = JSON.parse(data);
+    let newQueueNumber = parsedData.queueNumber;
+
+    queueList.unshift(newQueueNumber);
+
+    if (queueList.length > 15) {
+        queueList.pop();
+    }
+
+    renderQueue();
+});
+
+socket.on("CTRF:Enter", (data) => {
     let parsedData = JSON.parse(data);
     let newQueueNumber = parsedData.queueNumber;
 
