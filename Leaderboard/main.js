@@ -1,6 +1,5 @@
 
 
-```js
 const TOTAL_SLOTS = 15;
 const scoreboard = document.getElementById("scoreboard");
 
@@ -74,4 +73,3 @@ socket.on("scoreUpdate:Vodafone Booth", (data) => {
         scoreboard.appendChild(div);
     }
 });
-```
