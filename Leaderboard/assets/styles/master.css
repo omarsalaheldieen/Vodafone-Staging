@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "PIXELGAMEFONT";
+  src: local("HMBOLD"), url("../fonts/PIXELGAMEFONT.TTF");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(../images/background.png);
+  font-family: "PIXELGAMEFONT", Arial, serif;
+  font-size: 50px;
+  overflow: hidden;
+}
+
+#scoreboard {
+  position: absolute;
+  top: 270px;
+  left: 57%;
+  transform: translateX(-50%);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
+  width: 800px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between; /* spreads name & score evenly */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.team-name {
+  width: 530px;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 43px;
+  color: red;
+}
+
+.team-score {
+  width: 230px; /* adjust to match your box size */
+  text-align: center; /* centers the number */
+  font-size: 43px;
+  padding-left: 0; /* remove old left padding */
+  color: #374043;
+}
+
+.match:nth-child(1) {
+  order: 100;
+}
+
+.match:nth-child(2) {
+  order: 99;
+}
+
+.match:nth-child(3) {
+  order: 98;
+}
+
+.match:nth-child(4) {
+  order: 97;
+}
+
+.match:nth-child(5) {
+  order: 96;
+}
+
+.match:nth-child(6) {
+  order: 95;
+}
+
+.match:nth-child(7) {
+  order: 94;
+}
+
+.match:nth-child(8) {
+  order: 93;
+}
+
+.match:nth-child(9) {
+  order: 92;
+}
+
+.match:nth-child(10) {
+  order: 91;
+}
+
+.match:nth-child(11) {
+  order: 90;
+}
+
+.match:nth-child(12) {
+  order: 89;
+}
+
+.match:nth-child(13) {
+  order: 88;
+}
+
+.match:nth-child(14) {
+  order: 87;
+}
+
+.match:nth-child(15) {
+  order: 86;
+}
+
+.match img {
+  /* background-size: cover; */
+  width: 100%;
+}

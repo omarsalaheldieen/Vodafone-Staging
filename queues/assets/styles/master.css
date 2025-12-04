@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "PIXELGAMEFONT";
+  src: local("HMBOLD"), url("../fonts/PIXELGAMEFONT.TTF");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(../images/background.png);
+  font-family: "PIXELGAMEFONT", Arial, serif;
+  font-size: 50px;
+  overflow: hidden;
+}
+
+#queueContainer {
+  position: absolute;
+  top: 270px;
+  left: 54%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 41.5px;
+}
+
+.queue-item {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+
+.queue-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.queue-item .ticket {
+  text-align: center;
+  width: 100%; 
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.match:nth-child(1) {
+  order: 100;
+}
+
+.match:nth-child(2) {
+  order: 99;
+}
+
+.match:nth-child(3) {
+  order: 98;
+}
+
+.match:nth-child(4) {
+  order: 97;
+}
+
+.match:nth-child(5) {
+  order: 96;
+}
+
+.match:nth-child(6) {
+  order: 95;
+}
+
+.match:nth-child(7) {
+  order: 94;
+}
+
+.match:nth-child(8) {
+  order: 93;
+}
+
+.match:nth-child(9) {
+  order: 92;
+}
+
+.match:nth-child(10) {
+  order: 91;
+}
+
+.match:nth-child(11) {
+  order: 90;
+}
+
+.match:nth-child(12) {
+  order: 89;
+}
+
+.match:nth-child(13) {
+  order: 88;
+}
+
+.match:nth-child(14) {
+  order: 87;
+}
+
+.match:nth-child(15) {
+  order: 86;
+}
+
+.match img {
+  /* background-size: cover; */
+  width: 100%;
+}

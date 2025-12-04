@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vodafone Booth - Main Display</title>
+
+    <link rel="icon" type="image/png" href="/vodafone.png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: black;
+        }
+
+        .frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            transition: opacity 1s ease; /* fade duration */
+        }
+
+        /* top one fades over bottom one */
+        #frame1 { z-index: 2; }
+        #frame2 { z-index: 1; }
+
+        .hidden {
+            opacity: 0;
+        }
+
+        .visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Load ONCE and never reload -->
+    <iframe id="frame1" class="frame visible" src="./Leaderboard/index.html"></iframe>
+    <iframe id="frame2" class="frame hidden" src="./queues/index.html"></iframe>
+
+    <script>
+        let showingFirst = true;
+        const f1 = document.getElementById("frame1");
+        const f2 = document.getElementById("frame2");
+
+        setInterval(() => {
+            if (showingFirst) {
+                // Fade Leaderboard → Queue
+                f1.classList.remove("visible");
+                f1.classList.add("hidden");
+
+                f2.classList.remove("hidden");
+                f2.classList.add("visible");
+            } else {
+                // Fade Queue → Leaderboard
+                f2.classList.remove("visible");
+                f2.classList.add("hidden");
+
+                f1.classList.remove("hidden");
+                f1.classList.add("visible");
+            }
+
+            showingFirst = !showingFirst;
+
+        }, 5000); // every 5 seconds
+    </script>
+
+</body>
+</html>
