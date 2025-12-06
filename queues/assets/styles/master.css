@@ -33,10 +33,11 @@ body {
 }
 
 .queue-item {
+    position: relative;
+    width: 100%;
+    height: 80px; /* same as image */
     display: flex;
     align-items: center;
-    opacity: 0;
-    animation: fadeIn 0.8s forwards;
 }
 
 .queue-item img {
@@ -46,11 +47,14 @@ body {
 }
 
 .queue-item .ticket {
-    margin-left: 320px;
+    position: absolute;
+    left: 60%;
     margin-top: 13px;
+    transform: translateX(-50%);
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
+    font-size: 50px;
 }
 
 @keyframes fadeIn {
